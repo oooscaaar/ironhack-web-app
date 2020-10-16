@@ -36,7 +36,7 @@ const unlimitedAdventure = {
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
       `,
       desc: `
-        You are talking to a guard. He asks for an id card in order to let you pass the security check and access to the NASA building. \n\nType HELP to get a list of available commands.\n
+        You are talking to a guard. He asks for an ID card in order to let you pass the security check and access to the NASA building. \n\nType HELP to get a list of available commands.\n
       `
     },
     {
