@@ -316,7 +316,7 @@ Finally, you mange to access the room. You see a huge TELESCOPE in the middle of
         console.log('Asteroids Loaded!'); // Logs "Asteroids loaded"
       },
       items: [
-        { name: 'telescope', desc: '', response:'', use: ({disk, println, getRoom}) => {
+        { name: 'telescope', desc: 'This telescope is amazing. Now you know why it was several decades in the making.' , response:'', use: ({disk, println, getRoom}) => {
           println(unlimitedAdventure.rooms[5].items[0].response);
         }},
       ],
