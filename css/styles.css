@@ -20,6 +20,7 @@ a, a:visited, a:active {
 
 a:hover {
   text-decoration: underline;
+  color: #0f0;
 }
 
 /* scrollbar */
