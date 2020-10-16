@@ -1,0 +1,36 @@
+<head>
+    <title>AWGET?</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<div class="container">
+    <div class="wrapper">
+        <div class="wrapperLines">
+            <div class="fakeMenu row">
+                <div class="col-3 left">
+                    <div class="fakeButtons fakeClose"></div>
+                    <div class="fakeButtons fakeMinimize"></div>
+                    <div class="fakeButtons fakeZoom"></div>
+                </div>
+                <div class="col-6 consoleTitle">user@system:~</div>
+            </div>
+
+            <div id="output"></div>
+            <span>></span>
+            <input id="input" autofocus spellcheck="false"> 
+            
+        </div>
+    </div>
+</div>
+
+<!-- Include game data ('disk') -->
+<script src="scripts/awget-disk.js"></script>
+<!-- Include call to asteroids API -->
+<script src="scripts/apiCall.js"></script>
+<!-- Include game engine -->
+<script src="scripts/awget.js"></script>
+<!-- Load disk into engine -->
+<script>loadDisk(unlimitedAdventure);</script>

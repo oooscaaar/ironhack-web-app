@@ -1,0 +1,243 @@
+@font-face{
+  font-family: 'Apple II';
+  src: url('fonts/font.ttf');
+}
+
+body {
+  background-color: #272727;
+  color: #00ff00;
+  font-size: 1vh; /* Before 0.93 / 1 / 2.2 */
+  font-family: 'Apple II';
+  line-height: 2vh; /* Before 1.6 / 2 / 4*/
+  /* text glow */
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.6);
+}
+
+a, a:visited, a:active {
+  color: #0f0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 1vw;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+.img {
+  white-space: pre;
+  /* NOT NECESSARY
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  */
+}
+
+.wrapper {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-image: radial-gradient(
+    #000300, black 100%
+  );
+  padding-bottom: 8px;
+  }
+
+.wrapperLines {
+  background: repeating-linear-gradient(rgba(0, 255, 0, 0.02) 0.5vh, rgba(0, 0, 0, 0.02) 1vh);
+}
+
+#output {
+  padding: 2vw 2vw 0 2vw;
+}
+
+#output div {
+  margin-bottom: 1vw;
+}
+
+#input {
+  height: 2vh;
+  width: 90%;
+  color: #00ff00;
+  background: transparent;
+  font-size: 1vh;
+  font-weight: 500;
+  font-family: "Apple II";
+  border: none;
+  position: relative;
+  bottom: 0.071vh;
+}
+
+span {
+  margin-left: 2vw;
+}
+
+#input:focus {
+  outline: none;
+}
+
+@keyframes blink {
+  0% {background: #00ff00;}
+  49% {background: #00FF00;}
+  60% {background: transparent;}
+  99% {background: transparent;}
+  100% {background: #00FF00;}
+}
+
+.fakeButtons {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: relative;
+  background-color: #ff3b47;
+  border-color: #9d252b;
+  display: inline-block;
+}
+
+.fakeMinimize {
+  background-color: #ffc100;
+  border-color: #9d802c;
+}
+
+.fakeZoom {
+  background-color: #00d742;
+  border-color: #049931;
+}
+
+.fakeMenu {
+  width: 100%;
+  box-sizing: border-box;
+  height: 22px;
+  background-color: #bbb;
+  margin: 0 auto;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.consoleTitle {
+  color:#333333;
+  font-size: 0.9vh;
+  top: -2px;
+  justify-content: center;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.center{
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  white-space: pre;
+  text-align: center;
+}
+
+/* INTRO TEXT ANIMATION */
+.typewriter p {
+  overflow: hidden;
+  border-right: .6em solid #0f0;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .20em;
+  max-width: 460px;
+  animation: 
+    typing 4s steps(60, end),
+    blink-caret 1s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #0f0 }
+}
+
+/* MEDIA QUERY FOR DEVICES < 576 px */
+
+@media (max-width: 576px) {
+  body {
+  }
+  
+  /* Adapt Fake Window Bar */
+  .fakeMenu {
+    width: 100%;
+    box-sizing: border-box;
+    height: 18px;
+    background-color: #bbb;
+    margin: 0 auto;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  .fakeButtons {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: relative;
+    top: 5px;
+    background-color: #ff3b47;
+    border-color: #9d252b;
+    display: inline-block;
+  }
+
+  .fakeMinimize {
+    background-color: #ffc100;
+    border-color: #9d802c;
+  }
+  
+  .fakeZoom {
+    background-color: #00d742;
+    border-color: #049931;
+  }
+  
+  .consoleTitle {
+    color: black;
+    font-size: 1.4vh;
+    top: 3px;
+    line-height: 2vh;
+    justify-content: center;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+  }
+
+  /* Adapt Typewriting intro animation */
+  .typewriter p {
+    overflow: hidden;
+    border-right: .6em solid #0f0;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .20em;
+    max-width: 247px;
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .7s step-end infinite;
+  }
+
+}
