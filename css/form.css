@@ -59,7 +59,7 @@
 }
 
 .input::placeholder {
-    color:#1e1e1e;
+    color:#007400;
 }
 
 input:focus::placeholder {
